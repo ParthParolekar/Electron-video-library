@@ -1,0 +1,80 @@
+.navigation {
+  margin: 0 auto;
+  width: 100vw;
+  height: 5rem;
+}
+
+.badge-on-icon {
+  margin: 0 0.5rem;
+  cursor: pointer;
+  color: white;
+}
+
+.badge-on-icon i:hover {
+  color: var(--primary);
+}
+
+.big-logo {
+  display: none;
+}
+
+.logo {
+  height: 3rem;
+  margin-left: 2rem;
+}
+
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.nav-links {
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* top: -180px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 8rem;
+  background-color: var(--primary);
+  z-index: 1;
+  transition: 0.3s all;
+}
+
+.nav-links a {
+  margin: 0 1rem;
+}
+
+.nav-links-not-visible {
+  transform: translateY(-180px);
+}
+
+.nav-links-visible {
+  transform: translateY(6rem);
+}
+
+@media only screen and (min-width: 920px) {
+  .big-logo {
+    display: block;
+    height: 5rem;
+    margin-left: 2rem;
+  }
+
+  #hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    align-items: center;
+    position: relative;
+    background-color: transparent;
+    transform: translateY(0);
+  }
+
+  .logo {
+    display: none;
+  }
+}
