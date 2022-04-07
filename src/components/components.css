@@ -1,1 +1,5 @@
 @import "./Navbar/navbar.css";
+@import "./Banner/banner.css";
+@import "./Categories/categories.css";
+@import "./CategoryCard/categoy-card.css";
+@import "./Card/card.css";

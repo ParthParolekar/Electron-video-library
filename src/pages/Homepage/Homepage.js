@@ -1,7 +1,13 @@
 import React from "react";
+import { Banner, Categories } from "../../components";
 
 const Homepage = () => {
-  return <div>Homepage</div>;
+  return (
+    <>
+      <Banner />
+      <Categories />
+    </>
+  );
 };
 
 export default Homepage;
