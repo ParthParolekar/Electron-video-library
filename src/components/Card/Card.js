@@ -1,6 +1,11 @@
 import React from "react";
+import LikeButton from "../LikeButton/LikeButton";
 
-const Card = ({ _id, title, description, creator, thumbnail }) => {
+import WatchLaterButton from "../WatchLaterButton/WatchLaterButton";
+
+const Card = ({ video }) => {
+  const { _id, title, description, creator, thumbnail } = video;
+
   return (
     <div className="card card-shadow vertical-card">
       <div className="card-header">
@@ -9,11 +14,12 @@ const Card = ({ _id, title, description, creator, thumbnail }) => {
       <div className="card-content">
         <div className="card-title">{title}</div>
         <div className="card-subtext">
-          <div className="video-description">{description}</div>
+          <div className="video-description">{creator}</div>
         </div>
       </div>
       <div className="card-buttons flex-row justify-center align-center flex-wrap">
-        <button className="btn btn-primary text-btn">WATCH LATER</button>
+        <WatchLaterButton video={video} />
+        <LikeButton video={video} />
       </div>
     </div>
   );

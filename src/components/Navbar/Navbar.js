@@ -3,9 +3,31 @@ import bigLogo from "../../assets/20220206_152352.png";
 import logo from "../../assets/20220203_122320.png";
 
 import { Link } from "react-router-dom";
+import { useUser } from "../../Context/UserContext/UserContext";
+import { useAuth } from "../../Context/AuthContext/AuthContext";
 
-const Navbar = () => {
+const Navbar = ({ userLoggedIn }) => {
   const [navLinksVisible, setNavLinksVisible] = useState(false);
+  const [, dispatch] = useAuth();
+  const [userState] = useUser();
+
+  const loggedOutUser = {
+    foundUser: {
+      _id: null,
+      firstName: null,
+      lastName: null,
+      email: null,
+      cart: [],
+      wishlist: [],
+      id: null,
+    },
+    encodedToken: null,
+  };
+
+  const logOutHandler = () => {
+    dispatch({ type: "HANDLE_USER_AUTH", payload: loggedOutUser });
+    localStorage.removeItem("jwt");
+  };
 
   return (
     <nav className="navigation flex-row space-between align-center">
@@ -65,9 +87,15 @@ const Navbar = () => {
       </div>
 
       <div className="right-navigation navigation-icons flex-row align-center">
-        <Link to="/login">
-          <button className="btn btn-primary">Login</button>
-        </Link>
+        {!userLoggedIn ? (
+          <Link to="/login">
+            <button className="btn btn-primary">Login</button>
+          </Link>
+        ) : (
+          <button onClick={logOutHandler} className="btn btn-primary">
+            Logout
+          </button>
+        )}
       </div>
     </nav>
   );
