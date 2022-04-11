@@ -1,8 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../Context/AuthContext/AuthContext";
-import { useUser } from "../../Context/UserContext/UserContext";
+import { useUser, useAuth } from "../../Context";
 
 const WatchLaterButton = ({ video }) => {
   const [authState] = useAuth();
@@ -52,7 +51,6 @@ const WatchLaterButton = ({ video }) => {
             }
           )
           .then((res) => {
-            console.log(res.data);
             userDispatch({
               type: "WATCH_LATER_HANDLER",
               payload: res.data.watchlater,

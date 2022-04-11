@@ -3,13 +3,11 @@ import bigLogo from "../../assets/20220206_152352.png";
 import logo from "../../assets/20220203_122320.png";
 
 import { Link } from "react-router-dom";
-import { useUser } from "../../Context/UserContext/UserContext";
-import { useAuth } from "../../Context/AuthContext/AuthContext";
+import { useAuth } from "../../Context";
 
 const Navbar = ({ userLoggedIn }) => {
   const [navLinksVisible, setNavLinksVisible] = useState(false);
   const [, dispatch] = useAuth();
-  const [userState] = useUser();
 
   const loggedOutUser = {
     foundUser: {
@@ -17,8 +15,6 @@ const Navbar = ({ userLoggedIn }) => {
       firstName: null,
       lastName: null,
       email: null,
-      cart: [],
-      wishlist: [],
       id: null,
     },
     encodedToken: null,

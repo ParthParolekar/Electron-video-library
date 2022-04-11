@@ -1,8 +1,7 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card } from "../../components";
-import { useAuth } from "../../Context/AuthContext/AuthContext";
-import { useUser } from "../../Context/UserContext/UserContext";
+import { useUser, useAuth } from "../../Context";
 
 const LikedVideos = () => {
   const [authState] = useAuth();

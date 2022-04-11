@@ -1,8 +1,7 @@
 import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { useAuth } from "../../Context/AuthContext/AuthContext";
-import { useUser } from "../../Context/UserContext/UserContext";
+import { useUser, useAuth } from "../../Context";
 
 const LikeButton = ({ video }) => {
   const [authState] = useAuth();
