@@ -5,6 +5,8 @@ import CategoryCard from "./CategoryCard/CategoryCard";
 import Card from "./Card/Card";
 import LoginForm from "./AuthenticationForm/LoginForm/LoginForm";
 import SignupForm from "./AuthenticationForm/SignupForm/SignupForm";
+import WatchLaterButton from "./WatchLaterButton/WatchLaterButton";
+import LikeButton from "./LikeButton/LikeButton";
 export {
   Navbar,
   Banner,
@@ -13,4 +15,6 @@ export {
   Card,
   LoginForm,
   SignupForm,
+  WatchLaterButton,
+  LikeButton,
 };

@@ -28,7 +28,7 @@ function App() {
   }, [authState]);
   return (
     <div className="App">
-      <Navbar />
+      <Navbar userLoggedIn={userLoggedIn} />
       <Routes>
         <Route path="/" element={<Homepage />} />
         <Route path="/browse" element={<Browse />} />

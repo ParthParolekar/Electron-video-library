@@ -32,6 +32,7 @@ const Browse = () => {
           {videoList.map((video) => (
             <Card
               key={video._id}
+              video={video}
               description={video.discount}
               thumbnail={video.thumbnail}
               title={video.title}
