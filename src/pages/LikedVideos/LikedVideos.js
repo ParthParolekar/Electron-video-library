@@ -27,9 +27,7 @@ const LikedVideos = () => {
       </div>
       <div className="card-container flex-row align-center justify-center flex-wrap">
         {loading && <h3>Loading...</h3>}
-        {!loading && likedVideos.length === 0 && (
-          <h3>No Items in the wishlist</h3>
-        )}
+        {!loading && likedVideos.length === 0 && <h3>No Videos liked</h3>}
         {likedVideos.map((video) => (
           <Card
             key={video._id}

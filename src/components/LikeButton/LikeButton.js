@@ -51,7 +51,6 @@ const LikeButton = ({ video }) => {
             }
           )
           .then((res) => {
-            console.log(res.data);
             userDispatch({
               type: "LIKE_HANDLER",
               payload: res.data.likes,

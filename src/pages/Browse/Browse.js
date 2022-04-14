@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { Card } from "../../components";
 
 const Browse = () => {
-  const [videoList, setVideoList] = useState([]);
+  const [videoList, setVideoList] = useState();
 
   const [loading, setLoading] = useState(false);
 
@@ -28,8 +28,8 @@ const Browse = () => {
         </div>
         <div className="card-container flex-row align-center justify-center flex-wrap">
           {loading && <h3>Loading...</h3>}
-          {!loading && videoList.length === 0 && <h3>No results found</h3>}
-          {videoList.map((video) => (
+          {!loading && videoList?.length === 0 && <h3>No results found</h3>}
+          {videoList?.map((video) => (
             <Card
               key={video._id}
               video={video}

@@ -7,6 +7,11 @@ import LoginForm from "./AuthenticationForm/LoginForm/LoginForm";
 import SignupForm from "./AuthenticationForm/SignupForm/SignupForm";
 import WatchLaterButton from "./WatchLaterButton/WatchLaterButton";
 import LikeButton from "./LikeButton/LikeButton";
+import CreatePlaylist from "./CreatePlaylist/CreatePlaylist";
+import PlaylistCard from "./PlaylistCard/PlaylistCard";
+import DeletePlaylistButton from "./DeletePlaylistButton/DeletePlaylistButton";
+import PlaylistModal from "./PlaylistModal/PlaylistModal";
+import PlaylistButton from "./PlaylistButton/PlaylistButton";
 export {
   Navbar,
   Banner,
@@ -17,4 +22,9 @@ export {
   SignupForm,
   WatchLaterButton,
   LikeButton,
+  CreatePlaylist,
+  PlaylistCard,
+  DeletePlaylistButton,
+  PlaylistModal,
+  PlaylistButton,
 };

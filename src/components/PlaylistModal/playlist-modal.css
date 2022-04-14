@@ -1,0 +1,20 @@
+.playlist-modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.modal {
+  min-width: 100%;
+}
+
+.hide-playlist-modal {
+  display: none;
+}
+
+.show-playlist-modal {
+  display: block;
+}
