@@ -3,3 +3,5 @@
 @import "./Categories/categories.css";
 @import "./CategoryCard/categoy-card.css";
 @import "./Card/card.css";
+@import "./PlaylistCard/playlist-card.css";
+@import "./PlaylistModal/playlist-modal.css";

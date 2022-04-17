@@ -28,7 +28,7 @@ const WatchLater = () => {
       <div className="card-container flex-row align-center justify-center flex-wrap">
         {loading && <h3>Loading...</h3>}
         {!loading && watchLaterVideos.length === 0 && (
-          <h3>No Items in the wishlist</h3>
+          <h3>No Videos added to watchlater</h3>
         )}
         {watchLaterVideos.map((video) => (
           <Card

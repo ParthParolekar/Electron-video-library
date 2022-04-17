@@ -1,0 +1,10 @@
+.playlist-card {
+  width: 15rem;
+  height: 10rem;
+  transition: all 0.2s;
+  margin: 2rem 0.4rem;
+}
+
+.playlist-card:hover {
+  transform: scale(1.1);
+}
