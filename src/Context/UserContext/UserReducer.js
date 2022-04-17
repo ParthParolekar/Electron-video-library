@@ -3,6 +3,7 @@ export const initialState = {
   likedVideos: [],
   watchlater: [],
   playlists: [],
+  history: [],
 };
 
 export const userReducer = (state, action) => {
@@ -13,6 +14,8 @@ export const userReducer = (state, action) => {
       return { ...state, watchlater: action.payload };
     case "PLAYLIST_HANDLER":
       return { ...state, playlists: action.payload };
+    case "HISTORY_HANDLER":
+      return { ...state, history: action.payload };
     case "PLAYLIST_VIDEO_HANDLER":
       return {
         ...state,

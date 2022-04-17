@@ -50,13 +50,6 @@ const Navbar = ({ userLoggedIn }) => {
         }
       >
         <Link onClick={() => setNavLinksVisible(false)} className="link" to="/">
-          Home
-        </Link>
-        <Link
-          onClick={() => setNavLinksVisible(false)}
-          className="link"
-          to="/browse"
-        >
           Browse
         </Link>
         <Link
@@ -79,6 +72,13 @@ const Navbar = ({ userLoggedIn }) => {
           to="/likedvideos"
         >
           Liked Videos
+        </Link>
+        <Link
+          onClick={() => setNavLinksVisible(false)}
+          className="link"
+          to="/history"
+        >
+          History
         </Link>
       </div>
 

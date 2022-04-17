@@ -3,6 +3,7 @@ import Mockman from "mockman-js";
 import { Route, Routes, useLocation, Navigate } from "react-router-dom";
 import {
   Browse,
+  History,
   Homepage,
   LikedVideos,
   Login,
@@ -30,14 +31,24 @@ function App() {
   return (
     <>
       <PlaylistModal />
-      <div className="App blur">
+      <div>
         <Navbar userLoggedIn={userLoggedIn} />
 
         <Routes>
-          <Route path="/" element={<Homepage />} />
-          <Route path="/browse" element={<Browse />} />
+          <Route path="/" element={<Browse />} />
+          {/* <Route path="/browse" element={<Browse />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+          <Route
+            path="/history"
+            element={
+              userLoggedIn ? (
+                <History />
+              ) : (
+                <Navigate to="/login" state={{ from: location }} replace />
+              )
+            }
+          />
           <Route
             path="/watchlater"
             element={

@@ -12,6 +12,7 @@ import PlaylistCard from "./PlaylistCard/PlaylistCard";
 import DeletePlaylistButton from "./DeletePlaylistButton/DeletePlaylistButton";
 import PlaylistModal from "./PlaylistModal/PlaylistModal";
 import PlaylistButton from "./PlaylistButton/PlaylistButton";
+import ClearHistoryButton from "./ClearHistoryButton/ClearHistoryButton";
 export {
   Navbar,
   Banner,
@@ -27,4 +28,5 @@ export {
   DeletePlaylistButton,
   PlaylistModal,
   PlaylistButton,
+  ClearHistoryButton,
 };

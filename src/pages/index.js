@@ -6,6 +6,7 @@ import Login from "./Authentication/Login";
 import SignUp from "./Authentication/SignUp";
 import Browse from "./Browse/Browse";
 import SinglePlaylist from "./SinglePlaylist/SinglePlaylist";
+import History from "./History/History";
 
 export {
   Homepage,
@@ -16,4 +17,5 @@ export {
   Login,
   SignUp,
   Browse,
+  History,
 };

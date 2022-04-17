@@ -3,6 +3,8 @@ import React from "react";
 import { useUser, useAuth } from "../../Context";
 
 const DeletePlaylistButton = ({ playlist, icon }) => {
+  const [authState] = useAuth();
+  const [, userDispatch] = useUser();
   const deletePlaylist = async () => {
     try {
       await axios
@@ -25,8 +27,7 @@ const DeletePlaylistButton = ({ playlist, icon }) => {
       console.log(error);
     }
   };
-  const [authState] = useAuth();
-  const [, userDispatch] = useUser();
+
   return icon ? (
     <i class="fas fa-trash" onClick={deletePlaylist}></i>
   ) : (
