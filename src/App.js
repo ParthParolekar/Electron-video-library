@@ -10,6 +10,7 @@ import {
   Playlists,
   SignUp,
   SinglePlaylist,
+  SingleVideoPage,
   WatchLater,
 } from "./pages";
 import { useState, useEffect } from "react";
@@ -36,7 +37,6 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Browse />} />
-          {/* <Route path="/browse" element={<Browse />} /> */}
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
           <Route
@@ -90,6 +90,7 @@ function App() {
               )
             }
           />
+          <Route path="/video/:videoId" element={<SingleVideoPage />} />
           <Route path="/Mockman" element={<Mockman />} />
         </Routes>
       </div>

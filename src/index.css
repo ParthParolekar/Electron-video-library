@@ -13,6 +13,14 @@
   color: var(--off-white);
 }
 
+.full-width {
+  width: 100%;
+}
+
+.full-height {
+  height: 100%;
+}
+
 body {
   background-color: var(--secondary);
   font-family: "Montserrat", sans-serif;

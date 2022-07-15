@@ -6,26 +6,29 @@
 export const videos = [
   {
     _id: "Wo5dMEP_BbI",
-    title: "Awesome Video about Coding",
+    title: "Redux Toolkit Tutorial",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Soham Shah",
-    thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
+    creator: "Freecodecamp",
+    thumbnail: "https://img.youtube.com/vi/bbkBuqC1rU4/maxresdefault.jpg",
+    src: "https://www.youtube.com/embed/bbkBuqC1rU4",
   },
   {
     _id: "F_Riqjdh2oM",
-    title: "Neural Networks from Scratch - P.1 Intro and Neuron Code",
+    title: "React JS Crash Course",
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Sentdex",
-    thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
+    creator: "Traversy Media",
+    thumbnail: "https://img.youtube.com/vi/w7ejDZ8SWv8/maxresdefault.jpg",
+    src: "https://www.youtube.com/embed/w7ejDZ8SWv8",
   },
   {
     _id: "sFuSFo_wihoaf",
-    title: "Unreal Engine 5",
+    title: "Unreal Engine 5 Tutorial",
     description:
-      "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.",
-    creator: "Parth",
-    thumbnail: "https://getuikit.com/v2/docs/images/placeholder_600x400.svg",
+      "Unreal Engine 5 tutorial for beginners! In this free tutorial we will go over everything you need to know to get started in Unreal Engine 5. Specifically we will focus on Unreal's new features: nanite and lumen. You will learn how to install Unreal Engine, navigate the 3D viewport, create materials and worlds, sculpt landscapes, paint foliage, program in Unreal using Blueprints, and end with creating a photorealistic world in real time. ",
+    creator: "Unreal Sensei",
+    thumbnail: "https://img.youtube.com/vi/gQmiqmxJMtA/maxresdefault.jpg",
+    src: "https://www.youtube.com/embed/gQmiqmxJMtA",
   },
 ];

@@ -1,12 +1,13 @@
 import axios from "axios";
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import { useAuth, useUser } from "../../Context";
-import LikeButton from "../LikeButton/LikeButton";
-import PlaylistButton from "../PlaylistButton/PlaylistButton";
+
 import WatchLaterButton from "../WatchLaterButton/WatchLaterButton";
 
 const Card = ({ video }) => {
-  const { _id, title, description, creator, thumbnail } = video;
+  const navigate = useNavigate();
+  const { _id, title, description, creator, thumbnail, src } = video;
   const [authState] = useAuth();
   const [userState, userDispatch] = useUser();
   const cardClickHandler = async (e) => {
@@ -27,7 +28,8 @@ const Card = ({ video }) => {
               type: "HISTORY_HANDLER",
               payload: res.data.history,
             });
-          });
+          })
+          .then(navigate(`/video/${_id}`));
       } catch (error) {
         console.log(error);
       }
@@ -35,7 +37,10 @@ const Card = ({ video }) => {
   };
 
   return (
-    <div className="card card-shadow vertical-card" onClick={cardClickHandler}>
+    <div
+      className="card card-shadow vertical-card cursor-pointer"
+      onClick={cardClickHandler}
+    >
       <div className="card-header">
         <img src={thumbnail} alt="thumbnail" className="card-image" />
       </div>
@@ -49,8 +54,6 @@ const Card = ({ video }) => {
       </div>
       <div className="card-buttons flex-row justify-center align-center flex-wrap">
         <WatchLaterButton video={video} />
-        <LikeButton video={video} />
-        <PlaylistButton video={video} />
       </div>
     </div>
   );
