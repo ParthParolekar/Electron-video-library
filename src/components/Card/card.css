@@ -1,8 +1,9 @@
 .card {
   width: 20rem;
-  height: 20rem;
+  height: 23rem;
   transition: all 0.2s;
   margin: 2rem 0.2rem;
+  cursor: pointer;
 }
 
 .vertical-card {
