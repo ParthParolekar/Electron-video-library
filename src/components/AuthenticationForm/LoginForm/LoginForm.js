@@ -53,8 +53,8 @@ const LoginForm = () => {
 
       <button
         onClick={() => {
-          setEmail("adarshbalika@gmail.com");
-          setPassword("adarshBalika123");
+          setEmail("johndoe@gmail.com");
+          setPassword("johnDoe123");
         }}
         className="btn btn-outline-secondary"
       >
