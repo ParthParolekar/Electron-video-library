@@ -2,6 +2,7 @@ import axios from "axios";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { useAuth, useUser } from "../../Context";
+import PlaylistButton from "../PlaylistButton/PlaylistButton";
 
 import WatchLaterButton from "../WatchLaterButton/WatchLaterButton";
 
@@ -54,6 +55,7 @@ const Card = ({ video }) => {
       </div>
       <div className="card-buttons flex-row justify-center align-center flex-wrap">
         <WatchLaterButton video={video} />
+        <PlaylistButton video={video} />
       </div>
     </div>
   );
